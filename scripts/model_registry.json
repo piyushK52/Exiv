@@ -1,0 +1,273 @@
+{
+  "project": "ACE-Step 1.5",
+  "last_updated": "2026-04-17",
+  "models": [
+    {
+      "id": "acestep-v15-base",
+      "name": "ACE-Step v1.5 Base (2B)",
+      "type": "DiT (Diffusion Transformer)",
+      "size_gb": 4.7,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/acestep-v15-base",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "General-purpose base model supporting all audio editing tasks.",
+      "features": {
+        "text2music": true,
+        "cover": true,
+        "repaint": true,
+        "extract": true,
+        "lego": true,
+        "complete": true,
+        "reference_audio": true,
+        "cfg": true
+      },
+      "inference_steps": 50,
+      "quality": "Medium",
+      "diversity": "High",
+      "fine_tunability": "Easy",
+      "notes": "Only variant that supports extract, lego, and complete."
+    },
+    {
+      "id": "acestep-v15-sft",
+      "name": "ACE-Step v1.5 SFT (2B)",
+      "type": "DiT (Diffusion Transformer)",
+      "size_gb": 4.7,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/acestep-v15-sft",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "Supervised fine-tuned variant with higher generation quality.",
+      "features": {
+        "text2music": true,
+        "cover": true,
+        "repaint": true,
+        "extract": false,
+        "lego": false,
+        "complete": false,
+        "reference_audio": true,
+        "cfg": true
+      },
+      "inference_steps": 50,
+      "quality": "High",
+      "diversity": "Medium",
+      "fine_tunability": "Easy",
+      "notes": "Best quality for text2music, cover, and repaint. Disables extract/lego/complete."
+    },
+    {
+      "id": "acestep-v15-turbo",
+      "name": "ACE-Step v1.5 Turbo (2B)",
+      "type": "DiT (Diffusion Transformer)",
+      "size_gb": 4.7,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "Fastest variant optimized for speed with only 8 diffusion steps.",
+      "features": {
+        "text2music": true,
+        "cover": true,
+        "repaint": true,
+        "extract": false,
+        "lego": false,
+        "complete": false,
+        "reference_audio": true,
+        "cfg": false
+      },
+      "inference_steps": 8,
+      "quality": "Very High",
+      "diversity": "Medium",
+      "fine_tunability": "Medium",
+      "notes": "Ultra-fast generation. No CFG support. May have early fade issues on some prompts."
+    },
+    {
+      "id": "acestep-v15-xl-base",
+      "name": "ACE-Step v1.5 XL Base (4B)",
+      "type": "DiT (Diffusion Transformer)",
+      "size_gb": 9.0,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/acestep-v15-xl-base",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "XL series with 4B-parameter DiT decoder for higher audio quality.",
+      "features": {
+        "text2music": true,
+        "cover": true,
+        "repaint": true,
+        "extract": true,
+        "lego": true,
+        "complete": true,
+        "reference_audio": true,
+        "cfg": true
+      },
+      "inference_steps": 50,
+      "quality": "High",
+      "diversity": "High",
+      "fine_tunability": "Easy",
+      "notes": "Requires >=12GB VRAM (with offload) or >=20GB (without). Supports all tasks like base."
+    },
+    {
+      "id": "acestep-v15-xl-sft",
+      "name": "ACE-Step v1.5 XL SFT (4B)",
+      "type": "DiT (Diffusion Transformer)",
+      "size_gb": 9.0,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/acestep-v15-xl-sft",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "XL SFT variant with highest audio quality.",
+      "features": {
+        "text2music": true,
+        "cover": true,
+        "repaint": true,
+        "extract": false,
+        "lego": false,
+        "complete": false,
+        "reference_audio": true,
+        "cfg": true
+      },
+      "inference_steps": 50,
+      "quality": "Very High",
+      "diversity": "Medium",
+      "fine_tunability": "Easy",
+      "notes": "Requires >=12GB VRAM (with offload) or >=20GB (without). Best overall quality."
+    },
+    {
+      "id": "acestep-v15-xl-turbo",
+      "name": "ACE-Step v1.5 XL Turbo (4B)",
+      "type": "DiT (Diffusion Transformer)",
+      "size_gb": 9.0,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/acestep-v15-xl-turbo",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "XL turbo variant balancing speed and quality.",
+      "features": {
+        "text2music": true,
+        "cover": true,
+        "repaint": true,
+        "extract": false,
+        "lego": false,
+        "complete": false,
+        "reference_audio": true,
+        "cfg": false
+      },
+      "inference_steps": 8,
+      "quality": "Very High",
+      "diversity": "Medium",
+      "fine_tunability": "Medium",
+      "notes": "Requires >=12GB VRAM (with offload) or >=20GB (without). Fastest XL variant."
+    },
+    {
+      "id": "acestep-5Hz-lm-0.6B",
+      "name": "ACE-Step 5Hz LM 0.6B",
+      "type": "Language Model (LLM)",
+      "size_gb": 1.2,
+      "precision": "bfloat16",
+      "base_model": "Qwen3-0.6B",
+      "huggingface_url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "Small LM for Chain-of-Thought metadata generation and audio understanding.",
+      "features": {
+        "cot_metas": true,
+        "query_rewrite": true,
+        "audio_understanding": true,
+        "composition_capability": "Medium",
+        "copy_melody": "Weak"
+      },
+      "notes": "Suitable for low-VRAM systems. All LM models are fully compatible with all DiT variants."
+    },
+    {
+      "id": "acestep-5Hz-lm-1.7B",
+      "name": "ACE-Step 5Hz LM 1.7B",
+      "type": "Language Model (LLM)",
+      "size_gb": 3.4,
+      "precision": "bfloat16",
+      "base_model": "Qwen3-1.7B",
+      "huggingface_url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "Recommended LM for most use cases. Balances quality and VRAM usage.",
+      "features": {
+        "cot_metas": true,
+        "query_rewrite": true,
+        "audio_understanding": true,
+        "composition_capability": "Medium",
+        "copy_melody": "Medium"
+      },
+      "notes": "Recommended for GPUs with >=16GB VRAM. All LM models are fully compatible with all DiT variants."
+    },
+    {
+      "id": "acestep-5Hz-lm-4B",
+      "name": "ACE-Step 5Hz LM 4B",
+      "type": "Language Model (LLM)",
+      "size_gb": 8.0,
+      "precision": "bfloat16",
+      "base_model": "Qwen3-4B",
+      "huggingface_url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "Largest LM with strongest composition and audio understanding capabilities.",
+      "features": {
+        "cot_metas": true,
+        "query_rewrite": true,
+        "audio_understanding": true,
+        "composition_capability": "Strong",
+        "copy_melody": "Strong"
+      },
+      "notes": "Recommended for high-end GPUs (>=24GB). Best for long-form composition and complex prompts."
+    },
+    {
+      "id": "vae",
+      "name": "ACE-Step VAE (AutoencoderOobleck)",
+      "type": "VAE (Variational Autoencoder)",
+      "size_gb": 0.33,
+      "precision": "float16",
+      "huggingface_url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "modelscope_url": "https://modelscope.cn/models/ACE-Step/Ace-Step1.5",
+      "description": "Audio encoder/decoder that converts between waveform and latent representations.",
+      "features": {
+        "encode": true,
+        "decode": true,
+        "tiled_decode": true
+      },
+      "notes": "Shared across all DiT variants. Handles 48kHz stereo audio."
+    },
+    {
+      "id": "Qwen3-Embedding-0.6B",
+      "name": "Qwen3 Embedding 0.6B",
+      "type": "Text Encoder",
+      "size_gb": 1.2,
+      "precision": "bfloat16",
+      "huggingface_url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "modelscope_url": null,
+      "description": "Text encoder for converting captions and lyrics into embedding vectors for DiT conditioning.",
+      "features": {
+        "caption_embedding": true,
+        "lyric_embedding": true
+      },
+      "notes": "Shared across all DiT variants. Embedded into the ACE-Step checkpoint bundle."
+    }
+  ],
+  "compatibility_matrix": {
+    "description": "All LM models are fully compatible with all DiT variants. Mix and match freely.",
+    "recommended_combinations": [
+      {
+        "use_case": "General purpose, balanced quality/speed",
+        "dit": "acestep-v15-sft",
+        "lm": "acestep-5Hz-lm-1.7B",
+        "total_vram_gb": "~9.3 (DiT + VAE + Text Encoder + LM weights)"
+      },
+      {
+        "use_case": "Maximum quality, editing tasks",
+        "dit": "acestep-v15-xl-sft",
+        "lm": "acestep-5Hz-lm-4B",
+        "total_vram_gb": "~20+ (without offload)"
+      },
+      {
+        "use_case": "Fastest generation, low VRAM",
+        "dit": "acestep-v15-turbo",
+        "lm": "acestep-5Hz-lm-0.6B",
+        "total_vram_gb": "~6.2 (DiT + VAE + Text Encoder + LM weights)"
+      },
+      {
+        "use_case": "Audio editing (extract/lego/complete)",
+        "dit": "acestep-v15-base",
+        "lm": "acestep-5Hz-lm-1.7B",
+        "total_vram_gb": "~9.3"
+      }
+    ]
+  }
+}

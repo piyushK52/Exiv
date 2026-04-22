@@ -8,6 +8,24 @@
         "license": "Apache 2.0",
         "repo": "https://github.com/QwenLM/Qwen3-TTS"
     },
+    "acestep_v15_sft.safetensors": {
+        "type": "checkpoint",
+        "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/resolve/main/acestep-v15-sft/model.safetensors?download=true",
+        "family": "ACE-Step",
+        "variant": "v1.5 SFT 2B",
+        "commercial_use": true,
+        "license": "Apache 2.0",
+        "repo": "https://github.com/ACE-Step/ACE-Step"
+    },
+    "acestep_5hz_lm_1_7b.safetensors": {
+        "type": "checkpoint",
+        "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/resolve/main/acestep-5Hz-lm-1.7B/model.safetensors?download=true",
+        "family": "ACE-Step",
+        "variant": "5Hz LM 1.7B",
+        "commercial_use": true,
+        "license": "Apache 2.0",
+        "repo": "https://github.com/ACE-Step/ACE-Step"
+    },
     "qwen3_tts_12hz_custom_voice_1_7b.safetensors": {
         "type": "checkpoint",
         "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/resolve/main/model.safetensors?download=true",

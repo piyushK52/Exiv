@@ -87,6 +87,7 @@ class TextEncoderType(ExtendedEnum):
     QWEN25_3B = "qwen25_3b"
     QWEN25_7B = "qwen25_7b"
     LLAMA3_8 = "llama3_8"
+    QWEN3_EMBEDDING_0_6B = "qwen3_embedding_0_6b"
 
 class VisionEncoderType(ExtendedEnum):
     CLIP_G = "clip_g"
@@ -121,7 +122,13 @@ class Model(ExtendedEnum):
     QWEN3_TTS_VOICE_DESIGN = "qwen3_tts_voice_design"
     QWEN3_TTS_CUSTOM_VOICE = "qwen3_tts_custom_voice"
     QWEN3_TTS_BASE = "qwen3_tts_base"
-    
+
+    # ------------- ACE-Step Models -------------
+    ACESTEP_V15_SFT = "acestep_v15_sft"
+    ACESTEP_V15_TURBO = "acestep_v15_turbo"
+    ACESTEP_5HZ_LM_1_7B = "acestep_5hz_lm_1_7b"
+
 class VAEType(ExtendedEnum):
     WAN21 = "wan21"
     WAN22 = "wan22"
+    ACESTEP_OOBLECK = "acestep_oobleck"

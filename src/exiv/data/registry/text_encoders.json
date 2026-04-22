@@ -8,6 +8,15 @@
         "license": "Apache 2.0",
         "repo": "https://github.com/google-research/text-to-text-transfer-transformer"
     },
+    "qwen3_embedding_0_6b.safetensors": {
+        "type": "text_encoder",
+        "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/resolve/main/Qwen3-Embedding-0.6B/model.safetensors?download=true",
+        "family": "ACE-Step",
+        "variant": "Qwen3 Embedding 0.6B",
+        "commercial_use": true,
+        "license": "Apache 2.0",
+        "repo": "https://github.com/ACE-Step/ACE-Step"
+    },
     "umt5_xxl_fp8.safetensors": {
         "type": "text_encoder",
         "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",

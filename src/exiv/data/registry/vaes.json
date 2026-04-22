@@ -7,6 +7,15 @@
         "license": "Apache 2.0",
         "repo": "https://github.com/Wan-Video/Wan2.1"
     },
+    "acestep_vae.safetensors": {
+        "type": "vae",
+        "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/resolve/main/vae/diffusion_pytorch_model.safetensors?download=true",
+        "family": "ACE-Step",
+        "variant": "AutoencoderOobleck",
+        "commercial_use": true,
+        "license": "Apache 2.0",
+        "repo": "https://github.com/ACE-Step/ACE-Step"
+    },
     "wan_2_2_vae.safetensors": {
         "type": "vae",
         "url": "https://huggingface.co/wangkanai/wan22-vae/resolve/main/vae/wan/wan22-vae.safetensors?download=true",
