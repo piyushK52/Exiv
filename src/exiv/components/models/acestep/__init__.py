@@ -1,1 +1,3 @@
-from .constructor import get_acestep_dit_instance, get_acestep_lm_instance
+from .constructor import get_acestep_instance
+
+__all__ = ["get_acestep_instance"]
